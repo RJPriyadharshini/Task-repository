@@ -1,3 +1,49 @@
+#1 write a python program to calculate the total number of vowels and count of each individual vowel A,E,I,O,U in the string "Guvi geeks network private limited" 
+
+# Input string
+input_string = "guvi geeks network private limited"
+
+# Convert the input string to lowercase to handle both uppercase and lowercase vowels
+input_string = input_string.lower()
+
+# Initialize variables to count individual vowels
+count_a = 0
+count_e = 0
+count_i = 0
+count_o = 0
+count_u = 0
+
+# Iterate through the characters in the string
+for char in input_string:
+    if char == 'a':
+        count_a += 1
+    elif char == 'e':
+        count_e += 1
+    elif char == 'i':
+        count_i += 1
+    elif char == 'o':
+        count_o += 1
+    elif char == 'u':
+        count_u += 1
+
+# Calculate the total number of vowels
+total_vowels = count_a + count_e + count_i + count_o + count_u
+
+# Print the counts
+print("Total number of vowels:", total_vowels)
+print("Count of 'a':", count_a)
+print("Count of 'e':", count_e)
+print("Count of 'i':", count_i)
+print("Count of 'o':", count_o)
+print("Count of 'u':", count_u)
+
+#2 create a pyramid of numbers from 1 to 20 using for loop
+#input:
+for i in range(1,21):
+    print()
+    for j in range(1,i+1):
+        print(j,end="")
+
 # 3 write a function that takes a string and returns the number a new string with all the vowels removed
 def remove_vowels(string):
   vowels = set("aeiou")          # set vowels
