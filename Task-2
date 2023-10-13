@@ -102,3 +102,64 @@ def first_non_repeating_number(list1):
 list1 = [1, 2, 3, 4, 5, 1, 2, 3]
 first_non_repeating_number = first_non_repeating_number(list1)
 print(first_non_repeating_number)
+
+#8
+# Sorted list (ascending order)
+sorted_list = [1, 3, 5, 7, 9, 11, 13]
+
+# Find the minimum element (first element in the sorted list)
+minimum_element = sorted_list[0]
+
+print("Minimum element in the list is:", minimum_element)
+
+"""or"""
+def find_min_element(list1):
+  return list1[0]
+list1 = [1, 5, 10, 15, 20]
+min_element = find_min_element(list1)
+print(min_element)
+
+
+#9
+numbers = [10, 20, 30, 9]
+target_sum = 59
+
+# Find triplets with given sum
+triplets = [(a, b, c) for a in numbers for b in numbers for c in numbers if a + b + c == target_sum and a != b and b != c and a != c]
+
+# Print the result
+if triplets:
+    print("Triplets with sum", target_sum, "are:")
+    print(triplets)
+else:
+    print("No triplets found with the given sum.")
+
+#10
+def find_sublist_with_sum_zero(list1):
+  cumulative_sums = set()
+  current_sum = 0
+  for element in list1:
+    current_sum += element
+    if current_sum == 0 or current_sum in cumulative_sums:
+      return True
+    cumulative_sums.add(current_sum)
+  return False
+list1 = [4, 2, -3, 1, 6]
+result = find_sublist_with_sum_zero(list1)
+print(result)
+ #or
+
+def has_sublist_with_zero_sum(nums):
+    prefix_sum = 0
+    seen_sums = set()
+    for num in nums:
+        prefix_sum += num
+        if prefix_sum == 0 or prefix_sum in seen_sums:
+            return True
+        seen_sums.add(prefix_sum)
+    return False
+my_list = [4, 2, -3, 1, 6]
+if has_sublist_with_zero_sum(my_list):
+    print("Yes, there is a sublist with a sum equal to zero.")
+else:
+    print("No, there is no sublist with a sum equal to zero.")
