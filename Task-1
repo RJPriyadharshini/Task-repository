@@ -37,6 +37,18 @@ print("Count of 'i':", count_i)
 print("Count of 'o':", count_o)
 print("Count of 'u':", count_u)
 
+"""OUTPUT
+
+Total number of vowels: 12
+Count of 'a': 1
+Count of 'e': 5
+Count of 'i': 4
+Count of 'o': 1
+Count of 'u': 1
+
+"""
+
+
 #2 create a pyramid of numbers from 1 to 20 using for loop
 #input:
 for i in range(1,21):
@@ -44,8 +56,35 @@ for i in range(1,21):
     for j in range(1,i+1):
         print(j,end="")
 
+""" OUTPUT
+
+1
+12
+123
+1234
+12345
+123456
+1234567
+12345678
+123456789
+12345678910
+1234567891011
+123456789101112
+12345678910111213
+1234567891011121314
+123456789101112131415
+12345678910111213141516
+1234567891011121314151617
+123456789101112131415161718
+12345678910111213141516171819
+1234567891011121314151617181920
+"""
+
+
 # 3 write a function that takes a string and returns the number a new string with all the vowels removed
-def remove_vowels(string):
+
+
+def remove_vowels(string):        # create a function called remove_vowels
   vowels = set("aeiou")          # set vowels
   new_string = ""                # create empty string
   for char in string:            # char == string
@@ -55,26 +94,37 @@ def remove_vowels(string):
 
 print(remove_vowels("priyadharshini"))
 
+"""OUTPUT
+prydhrshn
+"""
+
 
 #4    write a function that takes a string and returns the number of unique characters in it
 
 
-def count_unique_characters(string):
+def count_unique_characters(string):   #  create a function called count_unique_characters
   unique_characters = set()            # empty set created because set does not allow duplicate values
   for character in string:             # character == string
     unique_characters.add(character)    # add characters
-  return len(unique_characters)
+  return len(unique_characters)         # returns the length
 print(count_unique_characters("priyadharshini"))
+
+"""OUTPUT
+9
+"""
 
 
 #5  write a function that takes a string and returns true if it is pallindrome  , false otherwise
-def is_palindrome(string):
+
+def is_palindrome(string):                     # Create a function called is_palindrome
   string = string.lower().replace(" ", "")    # convert the string as lower case and remove gaps
   reversed_string = string[::-1]           # reverse ,it returns the value from backwards
   return string == reversed_string
 
 print(is_palindrome("madam"))
-
+"""OUTPUT
+True
+"""
 
 #6
 def longest_common_substring(str1, str2):
