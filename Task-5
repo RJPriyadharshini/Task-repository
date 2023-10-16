@@ -1,22 +1,6 @@
 # QUESTION - 1
 
-write
-a
-python
-program
-to
-calculate
-the
-total
-number
-of
-vowels and count
-of
-each
-individual
-vowel
-A, E, I, O, U in the
-string
+write a python program to calculate the total number of vowels and count of each individual vowel A, E, I, O, U in the string
 "Guvi geeks network private limited"
 
 # Input string
