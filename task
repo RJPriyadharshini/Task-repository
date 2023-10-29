@@ -96,9 +96,9 @@ print(list)
 
 # 2. Write a python code using lambda function to check every element of an list is interger or string
 
-data = [10, 501, 22, 37, 100, 999, 87, 351,"KING"]
+given_list = [10, 501, 22, 37, 100, 999, 87, 351,"KING"]
 check_type = lambda x: "Integer" if isinstance(x, int) else "String"    # Check int or string using lambda function
-for i in data:
+for i in given_list:
     result = check_type(i)            # Check type of each element in the list
     print(f"{i} is {result}")
 
@@ -112,6 +112,22 @@ for i in data:
 87 is Integer
 351 is Integer
 """
+or ######     my_list = [1, "apple", 42, "banana", 3.14, "cherry"]
+
+# Use filter with a lambda function to separate integers and strings
+integers = list(filter(lambda x: isinstance(x, int), my_list))
+strings = list(filter(lambda x: isinstance(x, str), my_list))
+
+print("Integers:", integers)
+print("Strings:", strings)###########
+
+
+#######odd or even using lambda 
+l1=[2,3,4,5]
+odd_even=lambda x:"even" if x%2==0 else "odd"
+for i in l1:
+    result=odd_even(i)
+    print(f"{i} is {result}")
 
 #3 . using a python lambda function to create a fibonacci serious from 1 to 50 elements?
 
@@ -127,7 +143,12 @@ def fibonacci(count):
    any(map(lambda _:listA.append(sum(listA[-2:])),
          range(2, count)))
    return listA[:count]
-print(fibonacci(50))
+print(fibonacci(50))'''The function fibonacci takes a single argument, num, which represents the number of Fibonacci numbers to generate.
+The variable l1 is initialized as a list with the first two Fibonacci numbers: [0, 1]. These are the starting values for the Fibonacci sequence.
+The map function is used with a lambda function inside it. The purpose of map is to apply the lambda function to each value in the range from 2 to num - 1. The lambda function is defined as lambda _:, where _ is a common convention for an unused argument. The lambda function calculates the sum of the last two elements of the l1 list and appends that sum to the list l1. This extends the Fibonacci sequence by adding the next number.
+The any function is used with the map. The any function returns True if at least one element in the iterable is true. However, in this code, it's not used for its return value. Instead, it's used as a way to execute the map function for its side effect, which is appending values to the l1 list. This is a somewhat unconventional use of the any function. Essentially, it's being used to trigger the execution of the map without caring about the result.
+Finally, the function returns a slice of the l1 list, specifically the first num elements. This gives you the requested number of Fibonacci numbers.
+The print statement calls the fibonacci function with an argument of 50, which generates the first 50 Fibonacci numbers.'''
 
 # 4 write a python function to validate the regular expression for following
 
