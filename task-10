@@ -1,0 +1,22 @@
+pip commands
+
+Each line in the file typically consists of the package name and a version specifier. Here's what each part means:
+
+Package Name: The name of the Python package you want to install.
+
+Version Specifier: You can specify a version or version range to indicate which version(s) of the package should be installed. 
+The version specifiers include:
+
+==: Install a specific version.
+>=: Install the specified version or a higher version.
+<=: Install the specified version or a lower version.
+<: Install a version lower than the specified version.
+>: Install a version higher than the specified version.
+
+requirements.tx
+When you have a requirements.txt file, you can use it with pip to install all the specified packages and their versions 
+in one go. For example, to install the packages listed in the requirements.txt file, you can run the following command:    pip install -r requirements.txt
+
+This makes it easier to manage and replicate the environment for your Python project, ensuring that you have the right dependencies and versions
+when you need to deploy your application on a different system or share it with others.
+A requirements.txt file is a text document used to specify the Python packages and their versions that your project or application depends on.
