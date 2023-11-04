@@ -15,7 +15,21 @@ fun()
 cd
 
 
+Task-9
+#r"^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]{2,}$"
 
+#r"^(?=.*[a-z])(?=.*[A-Z])(?=.[0-9])(?=.*[!@#$%^&*])
+
+
+'''Task-7
+import datetime
+ def createfile():
+     currenttime=daytetime.datetime.now()
+     print(currenttime)
+     with open("timenow.txt","w") as file:
+         file.write(str(currenttime)
+createfile()'''
+'''
 """Shape	Area	Perimeter
 Circle	A = π × r2	Circumference = 2πr"""
 
