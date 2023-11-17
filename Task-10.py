@@ -43,7 +43,7 @@ class Audio:
             self.ratings.append(rating)
 
     def audio_average_rating(self):
-        return sum(self.ratings) / len(self.ratings)
+        return sum(self.ratings) / len(self.ratings) if self.ratings else 0
 
 class Playlist:
     def __init__(self, name, genre):
@@ -60,7 +60,7 @@ class Playlist:
             self.ratings.append(rating)
 
     def playlist_average_rating(self):
-        return sum(self.ratings) / len(self.ratings) 
+        return sum(self.ratings) / len(self.ratings) if self.ratings else 0
 class User:
     def __init__(self, name):
         self.name = name
